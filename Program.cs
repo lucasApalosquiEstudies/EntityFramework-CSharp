@@ -1,4 +1,5 @@
 ﻿using BlogEntity.Data;
+using BlogEntity.Models;
 using System;
 
 namespace BlogEntity
@@ -9,6 +10,9 @@ namespace BlogEntity
         {
             using (var context = new DataContext())
             {
+                var tag = new Tag { Name = "ASP.NET" , Slug = "aspnet"  };
+                context.Tags.Add(tag);
+                context.SaveChanges();
 
             }
         }
