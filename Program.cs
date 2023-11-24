@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlogEntity.Data;
+using System;
 
 namespace BlogEntity
 {
@@ -6,7 +7,10 @@ namespace BlogEntity
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (var context = new DataContext())
+            {
+
+            }
         }
     }
 }
