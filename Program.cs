@@ -1,5 +1,6 @@
 ﻿using BlogEntity.Data;
 using BlogEntity.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 
@@ -24,12 +25,19 @@ namespace BlogEntity
                 //context.Tags.Remove(tag);
                 //context.SaveChanges();
 
-                var tags = context.Tags.ToList();
+                var tags = context
+                            .Tags
+                            .AsNoTracking()
+                            .Where(x => x.Name.Contains("A"))
+                            .ToList();
+
 
                 foreach (var tag in tags)
                 {
                     Console.WriteLine($"Tag Name: {tag.Name} Slug: {tag.Slug}");
                 }
+
+
 
 
 
