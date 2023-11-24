@@ -15,10 +15,14 @@ namespace BlogEntity
                 //context.Tags.Add(tag);
                 //context.SaveChanges();
 
-                var tag = context.Tags.FirstOrDefault(x => x.Id == 6);
-                tag.Name = "ASP.NETCore";
-                context.Tags.Update(tag);
-                context.SaveChanges();
+                //var tag = context.Tags.FirstOrDefault(x => x.Id == 6);
+                //tag.Name = "ASP.NETCore";
+                //context.Tags.Update(tag);
+                //context.SaveChanges();
+
+                //var tag = context.Tags.FirstOrDefault(x => x.Id == 7);
+                //context.Tags.Remove(tag);
+                //context.SaveChanges();
 
             }
         }
