@@ -24,6 +24,15 @@ namespace BlogEntity
                 //context.Tags.Remove(tag);
                 //context.SaveChanges();
 
+                var tags = context.Tags.ToList();
+
+                foreach (var tag in tags)
+                {
+                    Console.WriteLine($"Tag Name: {tag.Name} Slug: {tag.Slug}");
+                }
+
+
+
             }
         }
     }
