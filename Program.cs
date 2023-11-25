@@ -46,14 +46,16 @@ namespace BlogEntity
 
                 var posts = context.Posts
                     .AsNoTracking()
-                    .Include(x => x.Author)
+                    //.Include(x => x.Author)
                     .OrderByDescending(x => x.LastUpdateDate)
                     .ToList();
 
                 foreach (var post in posts)
                 {
-                    Console.WriteLine($"{post.Title} | Autor: {post.Author.Name}");
+                    Console.WriteLine($"{post.Title} | Autor: {post.Author?.Name}");
                 }
+
+
             }
         }
     }
