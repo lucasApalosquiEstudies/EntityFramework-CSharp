@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogEntity.Models
+namespace BlogEntity.Data.Mappings
 {
-    public class PostTag
+    internal class CategoryMap
     {
-        public int PostId { get; set; }
-        public int TagId { get; set; }
     }
 }
