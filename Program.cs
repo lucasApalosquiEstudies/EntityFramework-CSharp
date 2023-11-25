@@ -44,18 +44,26 @@ namespace BlogEntity
                 //context.Posts.Add(post);
                 //context.SaveChanges();
 
-                var posts = context.Posts
-                    .AsNoTracking()
-                    //.Include(x => x.Author)
-                    .OrderByDescending(x => x.LastUpdateDate)
-                    .ToList();
+                //var posts = context.Posts
+                //    .AsNoTracking()
+                //    .Include(x => x.Author)
+                //    .OrderByDescending(x => x.LastUpdateDate)
+                //    .ToList();
 
-                foreach (var post in posts)
-                {
-                    Console.WriteLine($"{post.Title} | Autor: {post.Author?.Name}");
-                }
+                //foreach (var post in posts)
+                //{
+                //    Console.WriteLine($"{post.Title} | Autor: {post.Author?.Name}");
+                //}
 
+                var post = context.Posts
+                    .Include(x => x.Category)
+                    .Include(x => x.Author)
+                    .Where(x => x.AuthorId == 6)
+                    .FirstOrDefault();
 
+                post.Author.Name = "Luizitito";
+                context.Posts.Update(post);
+                context.SaveChanges();
             }
         }
     }
