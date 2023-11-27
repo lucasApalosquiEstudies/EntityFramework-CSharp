@@ -9,33 +9,29 @@ using System.Threading.Tasks;
 
 namespace BlogEntity.Data.Mappings
 {
-    public class CategoryMap : IEntityTypeConfiguration<Category>
+    public class TagMap : IEntityTypeConfiguration<Tag>
     {
-        public void Configure(EntityTypeBuilder<Category> builder)
+        public void Configure(EntityTypeBuilder<Tag> builder)
         {
-            // tabela
-            builder.ToTable("Category");
+            builder.ToTable("Tag");
 
-            // chave primária
             builder.HasKey(x => x.Id);
 
-            // identity
             builder.Property(x => x.Id)
                 .ValueGeneratedOnAdd()
                 .UseIdentityColumn();
 
-            // Propriedades
             builder.Property(x => x.Name)
-                .IsRequired()
                 .HasColumnName("Name")
-                .HasColumnType("NVARCHAR")
-                .HasMaxLength(80);
+                .HasColumnType("VARCHAR")
+                .HasMaxLength(80)
+                .IsRequired();
 
             builder.Property(x => x.Slug)
-                .IsRequired()
                 .HasColumnName("Slug")
                 .HasColumnType("VARCHAR")
-                .HasMaxLength(80);
+                .HasMaxLength(80)
+                .IsRequired();
         }
     }
 }
