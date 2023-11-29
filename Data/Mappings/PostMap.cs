@@ -78,13 +78,13 @@ namespace BlogEntity.Data.Mappings
                     "PostTag",
                     post => post.HasOne<Tag>()
                         .WithMany()
-                        .HasForeignKey("PostId")
-                        .HasConstraintName("FK_PostTag_PostId")
+                        .HasForeignKey("TagId")
+                        .HasConstraintName("FK_PostTag_TagId")
                         .OnDelete(DeleteBehavior.Cascade),
                     tag => tag.HasOne<Post>()
                         .WithMany()
-                        .HasForeignKey("TagId")
-                        .HasConstraintName("FK_PostTag_TagId")
+                        .HasForeignKey("PostId")
+                        .HasConstraintName("FK_PostTag_PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                 );
 

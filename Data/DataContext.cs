@@ -20,7 +20,7 @@ namespace BlogEntity.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=DESKTOP-BVKU5HC;Database=FluentBlog;Trusted_Connection=True;TrustServerCertificate=True");
+            options.UseSqlServer("Server=DESKTOP-BVKU5HC;Database=Blog;Trusted_Connection=True;TrustServerCertificate=True");
            
         }
 

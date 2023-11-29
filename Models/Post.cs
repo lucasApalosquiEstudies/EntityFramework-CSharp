@@ -21,6 +21,6 @@ namespace BlogEntity.Models
         public Category Category { get; set; }
         public User Author { get; set; }
 
-        public List<Tag> Tags { get; set; }
+        public List<Tag> Tags { get; set; } = new List<Tag>();
     }
 }
