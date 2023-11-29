@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BlogEntity.Migrations
 {
-    public partial class InitalCreation : Migration
+    public partial class intial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -77,8 +77,8 @@ namespace BlogEntity.Migrations
                     Summary = table.Column<string>(type: "VARCHAR(255)", maxLength: 255, nullable: false),
                     Body = table.Column<string>(type: "TEXT", nullable: false),
                     Slug = table.Column<string>(type: "VARCHAR(80)", maxLength: 80, nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValue: new DateTime(2023, 11, 29, 18, 24, 26, 84, DateTimeKind.Utc).AddTicks(5692)),
-                    LastUpdateDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValue: new DateTime(2023, 11, 29, 18, 24, 26, 87, DateTimeKind.Utc).AddTicks(8313)),
+                    CreateDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValue: new DateTime(2023, 11, 29, 18, 38, 47, 302, DateTimeKind.Utc).AddTicks(8889)),
+                    LastUpdateDate = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValue: new DateTime(2023, 11, 29, 18, 38, 47, 306, DateTimeKind.Utc).AddTicks(594)),
                     CategoryId = table.Column<int>(type: "int", nullable: true),
                     AuthorId = table.Column<int>(type: "int", nullable: true)
                 },

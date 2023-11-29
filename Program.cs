@@ -12,8 +12,8 @@ namespace BlogEntity
         {
             using (var context = new DataContext())
             {
-                
-               
+
+                // dotnet ef migrations script -o ./script.sql
             }
         }
     }

@@ -71,13 +71,13 @@ namespace BlogEntity.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("DATETIME")
-                        .HasDefaultValue(new DateTime(2023, 11, 29, 18, 24, 26, 84, DateTimeKind.Utc).AddTicks(5692))
+                        .HasDefaultValue(new DateTime(2023, 11, 29, 18, 38, 47, 302, DateTimeKind.Utc).AddTicks(8889))
                         .HasColumnName("CreateDate");
 
                     b.Property<DateTime>("LastUpdateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("DATETIME")
-                        .HasDefaultValue(new DateTime(2023, 11, 29, 18, 24, 26, 87, DateTimeKind.Utc).AddTicks(8313))
+                        .HasDefaultValue(new DateTime(2023, 11, 29, 18, 38, 47, 306, DateTimeKind.Utc).AddTicks(594))
                         .HasColumnName("LastUpdateDate");
 
                     b.Property<string>("Slug")
