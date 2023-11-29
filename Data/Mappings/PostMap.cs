@@ -62,6 +62,16 @@ namespace BlogEntity.Data.Mappings
             builder.HasIndex(x => x.Slug, "IX_Post_Slug")
                 .IsUnique();
 
+            // Relacionamento
+
+            builder.HasOne(x => x.Author)
+                .WithMany(x => x.Posts)
+                .HasConstraintName("FK_Post_Author");
+
+            builder.HasOne(x => x.Category)
+                .WithMany(x => x.Posts)
+                .HasConstraintName("FK_Post_Category");
+
         }
     }
 }
