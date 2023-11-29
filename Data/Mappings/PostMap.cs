@@ -47,11 +47,15 @@ namespace BlogEntity.Data.Mappings
             builder.Property(x => x.CreateDate)
                 .HasColumnName("CreateDate")
                 .HasColumnType("DATETIME")
+                .HasDefaultValue(DateTime.Now.ToUniversalTime())
+                //.HasDefaultValueSql("GETDATE()")
                 .IsRequired();
 
             builder.Property(x => x.LastUpdateDate)
                 .HasColumnName("LastUpdateDate")
                 .HasColumnType("DATETIME")
+                .HasDefaultValue(DateTime.Now.ToUniversalTime())
+                //.HasDefaultValueSql("GETDATE()")
                 .IsRequired();
 
 
