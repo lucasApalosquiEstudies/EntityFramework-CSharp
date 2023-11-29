@@ -55,6 +55,9 @@ namespace BlogEntity.Data.Mappings
                 .IsRequired();
 
 
+            builder.HasIndex(x => x.Slug, "IX_Post_Slug")
+                .IsUnique();
+
         }
     }
 }

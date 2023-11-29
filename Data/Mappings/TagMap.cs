@@ -32,6 +32,9 @@ namespace BlogEntity.Data.Mappings
                 .HasColumnType("VARCHAR")
                 .HasMaxLength(80)
                 .IsRequired();
+
+            builder.HasIndex(x => x.Slug, "IX_Tag_Slug")
+                .IsUnique();
         }
     }
 }
